@@ -1,0 +1,52 @@
+YOUTUB LINK--------> https://youtu.be/Ygvskt5HadI?si=xxJQf_G3rCcX2bV-
+
+
+Early Stopping
+Early stopping is a regularization strategy that monitors the model’s performance on a validation set during training. When the validation loss stops decreasing for a specified number of epochs (called patience) then training is paused. The goal is to capture the model at the point where it performs best on unseen data.
+
+Rather than training until a fixed number of epochs, early stopping uses feedback from validation performance to prevent overfitting.
+
+Key Benefits of Early Stopping
+Prevents Overfitting: Stops training once the model starts overfitting as indicated by increasing validation loss.
+Reduces Training Time: Saves computational resources by avoiding unnecessary epochs.
+Improves Generalization: Models trained with early stopping often perform better on real-world data.
+Simple to Implement: Requires minimal configuration and no changes to model architecture.
+
+
+Why Early Stopping Matters
+The difference in test accuracy may appear minor, early stopping offers significant advantages in practice:
+
+The model trained without early stopping might continue learning noise from the training data beyond a certain point, leading to overfitting.
+Early stopping avoids this by halting training once validation performance no longer improves, resulting in a model that's more robust to unseen data.
+In large-scale models and datasets, this technique can save hours of training time while improving deployment reliability.
+Early stopping is a simple technique to prevent overfitting in neural networks. It requires no changes to the model architecture and only a few lines of code to implement. By monitoring validation loss and stopping training at the right time, early stopping saves computational resources and builds more reliable models for real-world applications.
+
+
+
+
+Arguments----------------------------------------------------------------------------------------------------
+
+. monitor:- Quantity to be monitored.
+
+. min delta:- Minimum change in the monitored quantity to qualify as an improvement, i.e. an
+absolute change of less than min_delta, will count as no improvement.
+
+. patience:- Number of epochs with no improvement after which training will be stopped.
+
+· verbose:- Verbosity mode, 0 or 1. Mode 0 is silent, and mode 1 displays messages when the
+callback takes an action.
+
+. mode:- One of ("auto", "min", "max"). In min mode, training will stop when the quantity
+monitored has stopped.decreasing; in "max" mode it will stop when the quantity monitored has
+stopped increasing; in "auto" mode, the direction is automatically inferred from the name of the
+monitored quantity.
+
+. baseline:- Baseline value for the monitored quantity. Training will stop if the model doesn't
+show improvement over the baseline.
+
+· restore_best_weights:- Whether to restore model weights from the epoch with the best value of
+the monitored quantity. If False, the model weights obtained at the last step of training are
+used. An epoch will be restored regardless of the performance relative to the baseline. If no
+epoch improves on baseline, training will run for patience epochs and restore weights from the
+best epoch in that set.
+
