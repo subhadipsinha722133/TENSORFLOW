@@ -1,0 +1,5 @@
+VIDEO LINK:- https://youtu.be/2MSY0HwH5Ss?si=9JqlVe1KViZT181h
+
+allways weight can not be zero, if wight are zero model can not be train in relu and thah activation function
+
+model can not be captur nonlinear data
